@@ -6,8 +6,8 @@ Wasm engine.
 You are required to implement **any 3** the following four monitors:
 
 1. [Instruction Class Monitor](docs/iclass.md)
-2. [Malloc Profiler Monitor](docs/malloc-prof.md)
-3. [Path Profiler Monitor](docs/path-prof.md)
+2. [Memory Allocation Monitor](docs/malloc-prof.md)
+3. [Path Profiling Monitor](docs/path-prof.md)
 4. [Cache Simulation Monitor](docs/cache-prof.md)
 
 In order to enable grading, we enforce an output specification for each monitor that is expected to be met. See each link for details
