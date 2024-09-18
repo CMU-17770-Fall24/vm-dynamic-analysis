@@ -1,7 +1,11 @@
 # Malloc Profiling
 
-In this task, you will implement a Wizard monitor to profile memory allocation primitives (i.e. malloc/free), and report these
+In this task, you will implement a Wizard monitor to profile memory allocation primitives (e.g. malloc/free), and report these
 events to the user during execution.
+
+The monitor will be provided the name of the allocation function and the name of the free function as arguments. You can
+assume that the address passed into the malloc function and the free function are exactly the same.
+You will monitor the address of allocations, their size, as well as the corresponding free function invocation that deallocates it.
 
 ## Output Format for Grading:
 
@@ -29,6 +33,11 @@ Each memory allocation is tracked using a **unique, sequentially incremented id*
 - **Double-check your output** to ensure it meets the required format, as incorrect output will result in lost points.
 - Make sure to escape the monitor args when invoking from CLI (otherwise bash will expand the curly braces)
   - E.g: `./bin/wizeng '--monitors=malloc{a=malloc,f=free}' ...`
+
+## Generating Tests
+The easiest method will be to use [WASI](https://github.com/WebAssembly/wasi-sdk) with C/Rust toolchains.
+WASI often uses the function `dlmalloc` as opposed to `malloc` to allocate memory within libc, so prefer instrumenting the former.
+Deallocation is usually performed with `dlfree`.
 
 ## Sample Output
 
