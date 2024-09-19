@@ -15,8 +15,10 @@ In order to enable grading, we enforce an output specification for each monitor 
 
 ## Submitting the Project
 
-This repo serves as the project specification. For grading, we would like you to fork [Wizard](https://github.com/titzer/wizard-engine.git) privately.
-Since Wizard is under active development, we recommend resetting the repository to the **exact commit** in this repo, which will be used for grading. 
+This repo serves as the project specification. For grading, we would like you to fork [Wizard](https://github.com/titzer/wizard-engine/tree/63e11f0343f4e4343660d9f395078b1083d69a2e) 
+privately, and build it with this exact commit hash of [Virgil](https://github.com/titzer/virgil/tree/454a941b93ea25137d3ad12dcfdb8d82f1449d1b).
+Note that these aren't the HEAD of the main branch since both Virgil & Wizard are under active development. 
+We intend to use these exact commits specified for grading. 
 
 Make sure all the implemented monitors are present within `src/monitors` in the repository during submission. Add the TA (Github ID: arjunr2) as a
 collaborator to the project.
