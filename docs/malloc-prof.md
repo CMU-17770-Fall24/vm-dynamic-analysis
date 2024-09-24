@@ -42,3 +42,13 @@ Deallocation is usually performed with `dlfree`.
 ## Sample Output
 
 ![sample](./output_malloc.png)
+
+
+## FAQ
+
+* Do we need to handle malloc/free invocations from a host callsite?
+> Assume that malloc/free are only called from the wasm context for this project
+* Do we report the callsite or return point of the malloc/free call?
+> Call site
+* How do we handle double frees?
+> Report ID as 0 for subsequent unmapped frees after the first one

@@ -29,3 +29,10 @@ As with hardware caches, you will begin with a cold-start (i.e, the cache is emp
 ## Sample Output
 
 ![sample](./output_cache.png)
+
+
+## FAQ
+
+* Do we need to handle memory accesses that span cache block boundaries?
+> Yes, some accesses may span multiple cache lines
+

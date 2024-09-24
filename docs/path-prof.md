@@ -38,3 +38,15 @@ will generate at least one path.
 ## Sample output
 
 ![sample](./output_paths.png)
+
+
+## FAQ
+
+* Do we include the start of a function or loop in the reported path?
+> Yes, the start of a function or loop is the first entry in any path
+* Do we include an edge in the path for un-taken branches?
+> Yes, report it for the result of any calls that modify control flow
+* Do we need to handle instructions from wasm proposal extensions (exceptions, reference types, etc.)?
+> No
+* How do we report paths within the function with the same count?
+> Report them in lexicographical order of the path -- the path with a smaller pc in the first different path entry should appear first
