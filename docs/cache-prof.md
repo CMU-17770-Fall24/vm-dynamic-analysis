@@ -35,4 +35,5 @@ As with hardware caches, you will begin with a cold-start (i.e, the cache is emp
 
 * Do we need to handle memory accesses that span cache block boundaries?
 > Yes, some accesses may span multiple cache lines
-
+* Do we need to include instructions from wasm extensions (atomics, bulk-memory instructions etc.)?
+> No
